@@ -1,0 +1,14 @@
+def two_sums_2(nums, target):
+    l = 0
+    r = len(nums) - 1
+
+    while l <= r:
+        if nums[l] + nums[r] == target:
+            return [l + 1, r + 1]
+        elif nums[l] + nums[r] > target:
+            r -= 1
+        else:
+            l += 1
+
+
+print(two_sums_2([2, 4, 4, 15], 8))
